@@ -1,0 +1,53 @@
+<!DODCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} | SNM Store</title>
+</head>
+<body>
+    <nav class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+        <a href="/" class="text-xl font-semibold">SNM Store</a>
+        <div class="space-x-6">
+            <a href="#" class="text-lg font-semibold hover:text-gray-500">New Item</a>
+            <a href="#" class="text-lg font-semibold hover:text-gray-500">Browse</a>
+
+            <a href="#" class="px-6 py-3 text-lg font-semibold bg-red-500 text-white rounded-xl hover:bg-red-700">Sign Up</a>
+            <a href="#" class="px-6 py-3 text-lg font-semibold text-red-500 rounded-xl hover:text-red-700">Sign Up</a>
+        </div>
+    </nav>
+    <div class="px-6 py-6 ">
+        {% block content %}
+        
+        {% endblock content %}
+    </div>
+
+    <footer class=" py-4 flex justify-evenly">
+        <div class="px-4 before:content-['Company'] before:py-2 before:text-2xl before:border-red-500 before:border-b-[3px]">
+            <ul class="py-4">
+                <li><a href="/about"    class="text-lg transition ease-in-out delay-75 hover:text-red-500">About Us</a></li>
+                <li><a href="#" class="text-lg transition ease-in-out delay-75 hover:text-red-500">Our Services</a></li>
+                <li><a href="#"   class="text-lg transition ease-in-out delay-75 hover:text-red-500">Privay Policy</a></li>
+            </ul>              
+        </div>
+        <div class="px-4 before:content-['Get_Help'] before:py-2 before:text-2xl before:border-red-500 before:border-b-[3px]">
+            <ul class="py-4">
+            <li><a href="/faq"    class="text-lg transition ease-in-out delay-75 hover:text-red-500">FAQ</a></li>
+            <li><a href="/customer" class="text-lg transition ease-in-out delay-75 hover:text-red-500">Cutomer Service</a></li>
+            </ul> 
+        </div>
+        <div class="px-4 before:content-['Follow_Us'] before:py-2 before:text-2xl before:border-red-500 before:border-b-[3px]">
+            <div class="py-5">
+            <a href="#"> <i class="px-3 py-2 text-gray-50 bg-red-500 text-xl hover:bg-red-700 rounded-full fab fa-facebook-f"></i></a>
+            <a href="#"> <i class="px-2 py-2 text-gray-50 bg-red-500 text-xl hover:bg-red-700 rounded-full fab fa-twitter"></i></a>
+            <a href="#"> <i class="px-3 py-2 text-gray-50 bg-red-500 text-xl hover:bg-red-700 rounded-full fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
