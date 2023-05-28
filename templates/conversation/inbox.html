@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Inbox {% endblock title %}
+
+{% block content %}
+    <h1>Inbox</h1>
+    <div class="space-y-6">
+        {% for conversation in conversations  %}
+            <a href="#">
+                <div class="p-6 flex bg-gray-100 rounded-xl"
+            </a>
+        {% endfor %}
+    </div>
+{% endblock content %}

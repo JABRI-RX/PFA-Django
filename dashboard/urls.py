@@ -4,5 +4,5 @@ from dashboard.views import index
 
 app_name = 'dashboard'
 urlpatterns = [
-    path(''.index,name='index')
+    path('',index,name='index')
 ]
