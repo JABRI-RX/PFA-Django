@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% block title %}Customer Support{% endblock title %}
+{% block content %}
+  {% if  msg != "" %}
+    <div class="flex justify-center">
+
+      <h1 class="px-4 py-2 bg-green-400 rounded-lg">Thank you for the feedback</h1>
+    </div>
+  {% endif %}
+  <h1 class="py-7 text-4xl text-center">Consumer Support </h1>
+  <form class="flex justify-center" method="POST" action="{% url 'Core:support' %}">
+    {% csrf_token %}
+    <div class="w-[35em] ">
+      <input type="text" class="w-[30%] pr-20 py-1 rounded-sm border-black border-b-2 " name="name" placeholder="Name" required>
+      <input type="text" class="w-[69%] pr-20 py-1 rounded-sm border-black border-b-2 " name="Email" placeholder="Email" required>
+      <br>
+      <br>
+      <textarea class="py-4 w-[100%] h-[10em] border-2" placeholder="Descript Your Problem Here" required>
+          
+      </textarea>
+      <br>
+      <br>
+      <input  class="w-[100%] text-lg font-semibold text-gray-100 bg-red-500 px-5 py-2.5 rounded-xl hover:bg-red-600" type="submit" value="Send Report">
+
+    </div>
+  </form>
+{% endblock content %}

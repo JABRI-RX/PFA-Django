@@ -17,8 +17,8 @@
             <a href="#" class="text-lg font-semibold hover:text-gray-500">New Item</a>
             <a href="#" class="text-lg font-semibold hover:text-gray-500">Browse</a>
 
-            <a href="#" class="px-6 py-3 text-lg font-semibold bg-red-500 text-white rounded-xl hover:bg-red-700">Sign Up</a>
-            <a href="#" class="px-6 py-3 text-lg font-semibold text-red-500 rounded-xl hover:text-red-700">Sign Up</a>
+            <a href="{% url 'Core:signup' %}" class="px-6 py-3 text-lg font-semibold bg-red-500 text-white rounded-xl hover:bg-red-700">Sign Up</a>
+            <a href="#" class="px-6 py-3 text-lg font-semibold text-red-500   hover:text-red-700">Login </a>
         </div>
     </nav>
     <div class="px-6 py-6 ">
@@ -38,7 +38,7 @@
         <div class="px-4 before:content-['Get_Help'] before:py-2 before:text-2xl before:border-red-500 before:border-b-[3px]">
             <ul class="py-4">
             <li><a href="/faq"    class="text-lg transition ease-in-out delay-75 hover:text-red-500">FAQ</a></li>
-            <li><a href="/customer" class="text-lg transition ease-in-out delay-75 hover:text-red-500">Cutomer Service</a></li>
+            <li><a href="{% url 'Core:support' %}" class="text-lg transition ease-in-out delay-75 hover:text-red-500">Cutomer Service</a></li>
             </ul> 
         </div>
         <div class="px-4 before:content-['Follow_Us'] before:py-2 before:text-2xl before:border-red-500 before:border-b-[3px]">

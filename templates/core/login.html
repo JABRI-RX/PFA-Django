@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Login {% endblock title %}
+{% block content %}
+    <div class="w-1/2 my-6 mx-auto bg-gray-100 rounded-xl">
+        <h1 class="py-3 text-3xl text-center">Login</h1>
+        <div class="flex justify-center">
+            <form method="POST" action="{% url 'Core:signup'%}" class="py-3">
+                {% csrf_token %}
+                {% if forms.error %}
+                <ul class="text-center bg-red-500 text-white py-3 px-4 rounded-lg">
+                    {{form.errors}}
+                </ul>
+                {% endif %}
+                <table class="mb-9">
+                    <tr class="mb-9">
+                        <td><label class="inline-block mb-2">Username </label></td>
+                        <td class="w-[20rem]">{{form.username}}</td>
+                    </tr>
+ 
+                    <tr class="mb-9">
+                        <td><label class="inline-block mb-2">Password </label></td>
+                        <td class="w-[20rem]">{{form.password}}</td>
+                    </tr>
+                    
+                </table>
+               
+                <button class="py-4 px-8 text-lg bg-red-500 hover:bg-red-700 rounded-xl text-white">Sign Up</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
