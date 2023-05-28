@@ -5,7 +5,7 @@
     <div class="w-1/2 my-6 mx-auto bg-gray-100 rounded-xl">
         <h1 class="py-3 text-3xl text-center">Login</h1>
         <div class="flex justify-center">
-            <form method="POST" action="{% url 'Core:signup'%}" class="py-3">
+            <form method="POST" action="{% url 'Core:login'%}" class="py-3">
                 {% csrf_token %}
                 {% if forms.error %}
                 <ul class="text-center bg-red-500 text-white py-3 px-4 rounded-lg">

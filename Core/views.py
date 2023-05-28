@@ -30,7 +30,7 @@ def support(request):
 def signup(request):
     form = ""
     if request.method == 'POST':
-        print("BEGIN POST".center(100,"-"))
+       
         form = SignUpForm(request.POST)
 
         if form.is_valid():
@@ -39,9 +39,9 @@ def signup(request):
             print(form.errors)
         # return redirect('/login/')
     else:
-        print(" I am beging called ")
+         
         form = SignUpForm()
-    print("END POST".center(100,"-"))
+     
     return render(request, 'core/signup.html', {
-    'form': form
+        'form': form
     })
